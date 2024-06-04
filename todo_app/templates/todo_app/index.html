@@ -1,0 +1,37 @@
+<head>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, rgb(55, 55, 133), rgb(139, 80, 149));
+        }
+
+        div {
+            background-color: white;
+            border-radius: 25px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: left;
+        }
+
+        input {
+            background-color: rgb(243, 74, 27);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>To-Do List</h1>
+
+
+        {% block content %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Add Task" />
+        </form>
+        {% endblock %}
+    </div>
+</body>
