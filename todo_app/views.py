@@ -5,3 +5,5 @@ from .models import Owner, Patient
 from .forms import OwnerCreateForm, PatientCreateForm
 
 # Create your views here.
+def index(request):
+    return render(request, 'index.html')

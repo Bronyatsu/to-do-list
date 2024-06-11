@@ -11,12 +11,21 @@
             justify-content: center;
         }
 
+
+
         h1 {
             text-align: left;
         }
 
         input {
+            border-radius: 25px;
+        }
+
+        .redman {
+
             background-color: rgb(243, 74, 27);
+            cursor: pointer;
+            margin-left: -20px;
         }
     </style>
 </head>
@@ -30,7 +39,8 @@
         <form action="" method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Add Task" />
+            <input type="checkbox"><input type="text" class="ass" value="New Task"><input type="submit" class="redman"
+                value="Add Task" />
         </form>
         {% endblock %}
     </div>
